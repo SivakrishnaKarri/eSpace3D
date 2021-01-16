@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 191441253, guid: 2f01b1d22424f5f46ae2bcc890ccdafd, type: 3}
+  m_Name: AssetLoaderOptions
+  m_EditorClassIdentifier: 
+  UseFileScale: 1
+  ScaleFactor: 1
+  SortHierarchyByName: 1
+  ImportVisibility: 1
+  Static: 0
+  AddAssetUnloader: 1
+  ImportMeshes: 1
+  LimitBoneWeights: 1
+  ReadEnabled: 1
+  ReadAndWriteEnabled: 0
+  OptimizeMeshes: 1
+  GenerateColliders: 0
+  ConvexColliders: 0
+  ImportBlendShapes: 1
+  ImportColors: 1
+  IndexFormat: 1
+  KeepQuads: 0
+  ImportNormals: 1
+  SmoothingAngle: 60
+  ImportBlendShapeNormals: 1
+  ImportTangents: 0
+  SwapUVs: 0
+  ImportMaterials: 1
+  MaterialMappers:
+  - {fileID: 11400000, guid: 663edc1dc4ca5e941a96198640f7715f, type: 2}
+  ImportTextures: 1
+  TextureMapper: {fileID: 0}
+  TextureCompressionQuality: 1
+  MaxTextureResolution: 4096
+  GenerateMipmaps: 1
+  FixNormalMaps: 1
+  AnimationType: 0
+  AvatarDefinition: 0
+  Avatar: {fileID: 0}
+  RuntimeAnimatorController: {fileID: 0}
+  HumanDescription:
+    armStretch: 0.05
+    feetSpacing: 0
+    hasTranslationDof: 0
+    legStretch: 0.5
+    lowerArmTwist: 0.5
+    lowerLegTwist: 0.5
+    upperArmTwist: 0.5
+    upperLegTwist: 0.5
+  AnimatorControllerMapper: {fileID: 0}
+  RootBoneMapper: {fileID: 11400000, guid: 716c5179778ecf14db836ae4a1872c00, type: 2}
+  HumanoidAvatarMapper: {fileID: 0}
+  LipSyncMappers: []
+  SampleBindPose: 0
+  EnforceTPose: 0
+  ImportAnimations: 0
+  ResampleAnimations: 1
+  AnimationWrapMode: 2
+  AnimationClipMapper: {fileID: 0}
+  AnimationClipMappers:
+  - {fileID: 0}
+  ExternalDataMapper: {fileID: 0}
+  DoubleToFloatMapper: {fileID: 0}
+  ShowLoadingWarnings: 1
+  CloseStreamAutomatically: 1
+  Timeout: 60
+  DestroyOnError: 1

@@ -1,0 +1,104 @@
+{
+	"Cameras": [
+		{
+			"name": "Front",
+			"translation": [
+				0.2,
+				1.18,
+				7.22
+			],
+			"rotation": [
+				0,
+				180,
+				0
+			],
+			"Field_of_View": [
+				26
+			],
+			"Clipping_Planes": [
+				4.62,
+				1000
+			]
+		},
+		{
+			"name": "Back",
+			"translation": [
+				0.12,
+				1.56,
+				-4.1
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"Field_of_View": [
+				58
+			],
+			"Clipping_Planes": [
+				0.1,
+				1000
+			]
+		},
+		{
+			"name": "Top",
+			"translation": [
+				0.26,
+				8.82,
+				-0.05
+			],
+			"rotation": [
+				90,
+				90,
+				0
+			],
+			"Field_of_View": [
+				35
+			],
+			"Clipping_Planes": [
+				6.9,
+				1000
+			]
+		},
+		{
+			"name": "Left",
+			"translation": [
+				7,
+				1.39,
+				-0.7
+			],
+			"rotation": [
+				0,
+				270,
+				0
+			],
+			"Field_of_View": [
+				26
+			],
+			"Clipping_Planes": [
+				4.61,
+				1000
+			]
+		},
+		{
+			"name": "Right",
+			"translation": [
+				-6.24,
+				1.88,
+				-0.38
+			],
+			"rotation": [
+				6,
+				90,
+				0
+			],
+			"Field_of_View": [
+				26
+			],
+			"Clipping_Planes": [
+				4.2,
+				1000
+			]
+		}
+	]
+}
