@@ -129,8 +129,8 @@ public class TransformsManager : MonoBehaviour
 			}
 			
 			if (selectionManager != null ) selectionManager.enabled=true;
-		DebugTexDisplay.instance.debugText.text = "Rest clicked..";
-		Debug.Log("Rest clicked");
+		DebugDisplay.instance.DisplayDebugMessage("Reset clicked");
+		Debug.Log("Reset clicked");
 		}
 	
 }
