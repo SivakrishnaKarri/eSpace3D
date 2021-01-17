@@ -296,15 +296,12 @@ namespace RuntimeGizmos
 		public void Undo()
 		{
 			UndoRedoManager.Undo();
-			DebugDisplay.instance.DisplayDebugMessage("Undo operation started..");
-			//DebugTexDisplay.instance.debugText.text = "Undo operation started..";
 			Debug.Log("Undo operation started");
 		}
 
 		public void Redo()
 		{
 			UndoRedoManager.Redo();
-			DebugDisplay.instance.DisplayDebugMessage("Redo operation started");
 			Debug.Log("Redo operation started");
 		}
 
@@ -349,7 +346,6 @@ namespace RuntimeGizmos
 		{
 			transformType = TransformType.Move;
 			showGizmoHandle = true;
-			DebugDisplay.instance.DisplayDebugMessage("Selected Move button");
 			Debug.Log("Selected Move button");
 		}
 
@@ -357,7 +353,6 @@ namespace RuntimeGizmos
 		{
 			transformType = TransformType.Rotate;
 			showGizmoHandle = true;
-			DebugDisplay.instance.DisplayDebugMessage("Rotate selected");
 			Debug.Log("Rotate selected");
 		}
 
@@ -365,7 +360,6 @@ namespace RuntimeGizmos
 		{
 			transformType = TransformType.Scale;
 			showGizmoHandle = true;
-			DebugDisplay.instance.DisplayDebugMessage("Scale is selected");
 			Debug.Log("Scale is selected");
 		}
 
@@ -380,7 +374,6 @@ namespace RuntimeGizmos
 			}
 
 			SetSelectionFlag(false);
-			DebugDisplay.instance.DisplayDebugMessage("Deselected");
 			Debug.Log("Deselected");
 		}
 
@@ -782,7 +775,6 @@ namespace RuntimeGizmos
 			targets.Clear();
 
 			Deselect(false);
-			DebugDisplay.instance.DisplayDebugMessage("Delected successfully");
 			Debug.Log("Delected successfully");
 		}
 

@@ -53,7 +53,7 @@ namespace IngameDebugConsole
 
 		public float ItemHeight { get { return logItemHeight; } }
 		public float SelectedItemHeight { get { return heightOfSelectedLogEntry; } }
-
+		
 		private void Awake()
 		{
 			scrollView = viewportTransform.GetComponentInParent<ScrollRect>();

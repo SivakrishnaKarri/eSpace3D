@@ -128,9 +128,8 @@ public class TransformsManager : MonoBehaviour
 				}
 			}
 			
-			if (selectionManager != null ) selectionManager.enabled=true;
-		DebugDisplay.instance.DisplayDebugMessage("Reset clicked");
-		Debug.Log("Reset clicked");
+			if (selectionManager != null ) selectionManager.enabled=true;		
+			Debug.Log("Reset clicked");
 		}
 	
 }

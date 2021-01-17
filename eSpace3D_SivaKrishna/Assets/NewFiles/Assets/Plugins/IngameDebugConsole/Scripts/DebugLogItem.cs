@@ -11,6 +11,7 @@ namespace IngameDebugConsole
 {
 	public class DebugLogItem : MonoBehaviour, IPointerClickHandler
 	{
+	
 		#region Platform Specific Elements
 #if !UNITY_2018_1_OR_NEWER
 #if !UNITY_EDITOR && UNITY_ANDROID
@@ -86,8 +87,9 @@ namespace IngameDebugConsole
 		private float copyLogButtonHeight;
 
 		private DebugLogRecycledListView manager;
-
-		public void Initialize( DebugLogRecycledListView manager )
+		public string DebuMessage;
+      
+        public void Initialize( DebugLogRecycledListView manager )
 		{
 			this.manager = manager;
 
@@ -133,12 +135,15 @@ namespace IngameDebugConsole
 
 					logText.rectTransform.anchoredPosition = logTextOriginalPosition;
 					logText.rectTransform.sizeDelta = logTextOriginalSize;
+					
 				}
 			}
 			transformComponent.sizeDelta = size;
 
 			logText.text = isExpanded ? logEntry.ToString() : logEntry.logString;
+			DebuMessage = isExpanded ? logEntry.ToString() : logEntry.logString;
 			logTypeImage.sprite = logEntry.logTypeSpriteRepresentation;
+			DebugDisplay.OnDebugMessageDisplayed?.Invoke(DebuMessage, logEntry.logTypeSpriteRepresentation);
 		}
 
 		// Show the collapsed count of the debug entry

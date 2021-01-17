@@ -162,7 +162,6 @@ namespace GILES
 			orbitFlag = false;
 			zoomFlag = false;
 			GetComponent<Zoom>().enabled = false;
-			DebugDisplay.instance.DisplayDebugMessage("Clicked selection mode");
 			Debug.Log("Clicked selection mode");
 		}
 
@@ -173,7 +172,6 @@ namespace GILES
 			zoomFlag = false;
 			GetComponent<Zoom>().enabled = false;
 			TransformGizmo.instance.SetSelectionFlag(false);
-			DebugDisplay.instance.DisplayDebugMessage("Pan button Clicked");
 			Debug.Log("Pan button Clicked");
 		}
 
@@ -184,7 +182,6 @@ namespace GILES
 			zoomFlag = false;
 			GetComponent<Zoom>().enabled = false;
 			TransformGizmo.instance.SetSelectionFlag(false);
-			DebugDisplay.instance.DisplayDebugMessage("Orbit button Clicked");
 			Debug.Log("Orbit button Clicked");
 		}
 
@@ -195,7 +192,6 @@ namespace GILES
 			zoomFlag = true;
 			GetComponent<Zoom>().enabled = true;
 			TransformGizmo.instance.SetSelectionFlag(false);
-			DebugDisplay.instance.DisplayDebugMessage("Zoom Operation started");
 			Debug.Log("Zoom Operation started");
 		}
 
@@ -204,7 +200,6 @@ namespace GILES
 			transform.position = defaultPosition;
 			transform.rotation = defaultRotation;
 			distanceToCamera = Vector3.Distance(pivot, Camera.main.transform.position);
-			DebugDisplay.instance.DisplayDebugMessage("Reset");
 			Debug.Log("Reset");
 		}
 
