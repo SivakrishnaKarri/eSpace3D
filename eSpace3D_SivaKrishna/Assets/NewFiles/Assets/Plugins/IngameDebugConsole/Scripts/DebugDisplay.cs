@@ -39,12 +39,7 @@ using System;
          iconImage.sprite = icon;
         // StartCoroutine(DisableMessage());
     }
-    public void DisplayDebugMessage1(string message)
-    {
-         debugText.gameObject.SetActive(true);
-         debugText.text = message;
-          StartCoroutine(DisableMessage());
-    }
+   
     IEnumerator DisableMessage()
         {
             yield return new WaitForSeconds(5f);

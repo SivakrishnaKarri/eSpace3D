@@ -162,7 +162,7 @@ namespace IngameDebugConsole
 		[SerializeField]
 		private RectTransform logItemsContainer;
 
-		public RectTransform lastItemContainer;
+		//public RectTransform lastItemContainer;
 
 		[SerializeField]
 		private RectTransform commandSuggestionsContainer;
@@ -1272,13 +1272,8 @@ namespace IngameDebugConsole
 			}
 			else
 			{
-				newLogItem = (DebugLogItem) Instantiate( logItemPrefab, logItemsContainer, false );
-				// ClearAllChildren(lastItemContainer);
-
-				//newLogItem1 = (DebugLogItem)Instantiate(logItemPrefab, lastItemContainer, false);
-
-				newLogItem.Initialize( recycledListView );
-				//newLogItem1.Initialize1(recycledListView);
+				newLogItem = (DebugLogItem) Instantiate( logItemPrefab, logItemsContainer, false );				
+				newLogItem.Initialize( recycledListView );				
 			}
 
 			return newLogItem;
