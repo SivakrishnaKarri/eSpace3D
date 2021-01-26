@@ -134,6 +134,9 @@ namespace RuntimeGizmos
 
 		public static TransformGizmo instance = null;
 
+        public bool undo=false;
+        public bool redo = false;
+
 		void Awake()
 		{
 			instance = this;
@@ -169,9 +172,9 @@ namespace RuntimeGizmos
 
 		void Update()
 		{
-			if (Input.GetKey(KeyCode.LeftAlt) || EventSystem.current.IsPointerOverGameObject())
+			/* if (Input.GetKey(KeyCode.LeftAlt) || EventSystem.current.IsPointerOverGameObject())
 				return;
-
+			*/
 			if (Input.GetKey(KeyCode.Escape))
 			{
 				Deselect();
@@ -291,19 +294,43 @@ namespace RuntimeGizmos
 					Redo();
 				}
 			}
+
+            if(undo == true)
+            {
+              //  UndoRedoManager.Undo();
+            }
+            if(redo == true)
+            {
+              //  UndoRedoManager.Redo();
+            }
 		}
 
-		public void Undo()
+        public void UndoClicked()
+        {
+            Debug.Log("Coming Here");
+            undo = true;
+           // UndoRedoManager.Undo();
+        }
+        public void RedoClicked()
+        {
+          //  UndoRedoManager.Redo();
+            redo = true;
+        }
+        public void Undo()
 		{
-			UndoRedoManager.Undo();
+           
+            UndoRedoManager.Undo();
 			Debug.Log("Undo operation started");
-		}
+            undo = false;
+        }
 
 		public void Redo()
 		{
-			UndoRedoManager.Redo();
+            redo = false;
+            UndoRedoManager.Redo();
 			Debug.Log("Redo operation started");
-		}
+            redo = false;
+        }
 
 		//We only support scaling in local space.
 		public TransformSpace GetProperTransformSpace()
