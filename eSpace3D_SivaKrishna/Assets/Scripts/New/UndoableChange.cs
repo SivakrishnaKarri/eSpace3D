@@ -6,27 +6,34 @@ public struct UndoableChange
 {
     private List<ObjectState> _before;
     private List<ObjectState> _after;
-    private ObjectState before;
-    private ObjectState after;
+   
 
-   /* public UndoableChange(List<ObjectState> before, List<ObjectState> after)
+    public UndoableChange(List<ObjectState> before, List<ObjectState> after)
     {
         _before = before;
         _after = after;
+      //  Undo();
     }
-    */
-    public UndoableChange(ObjectState before, ObjectState after) : this()
+    
+   /* public UndoableChange(ObjectState before, ObjectState after) : this()
     {
         this.before = before;
         this.after = after;
-    }
+      //  Undo();
+        before.Apply();
+    }*/
 
     public void Undo()
     {
+       // Debug.Log("Coming"+ _before.Count);
+      //  var i = _before.Count - 1;
+     //   _before[i].Apply();
         foreach (var state in _before)
         {
             state.Apply();
         }
+       
+     
     }
 
     public void Redo()

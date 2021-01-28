@@ -9,10 +9,11 @@ public static class UndoRedoClass
 
     public static void Undo()
     {
+        Debug.LogError("undo stack count"+undoStack.Count);
         if (undoStack.Count == 0) return;
 
         var lastAction = undoStack.Pop();
-
+        Debug.Log("last action"+lastAction);
         lastAction.Undo();
 
         redoStack.Push(lastAction);
@@ -20,6 +21,7 @@ public static class UndoRedoClass
 
     public static void Redo()
     {
+        Debug.LogError("undo stack count" + redoStack.Count);
         if (redoStack.Count == 0) return;
 
         var lastAction = redoStack.Pop();
@@ -34,5 +36,6 @@ public static class UndoRedoClass
         redoStack.Clear();
 
         undoStack.Push(action);
+        Debug.Log(""+undoStack.Count);
     }
 }
